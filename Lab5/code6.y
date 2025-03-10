@@ -17,7 +17,7 @@ double symbolTable[26];
 
 %token <int_val> INTEGER
 %token <float_val> FLOAT
-%token <char_val> VAR
+%token <char_val> VARIABLE
 %token LBRAC RBRAC NL ASSIGN
 %left PLUS MINUS
 %left MULTIPLY DIVIDE
