@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main()
+{
+  int var1,varTWO,var3;
+  int testone,testtwo;
+  var3=(varTWO+var3)/(var1*varTWO);
+  testtwo=testone;
+}

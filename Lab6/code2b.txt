@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main()
+{
+  int var1,varTWO,var3, if;
+  int ifwhy;
+  var3=(varTWO+var3)/(var1*varTWO);
+}
