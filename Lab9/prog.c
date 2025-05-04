@@ -59,7 +59,6 @@ int main(){
 	fprintf(fout, "\n.section .text\n.globl main\nmain:\n");
 	fprintf(fout, "\tpushq %%rbp\n\tmovq %%rsp, %%rbp\n\n");
 
-
 	for (int i = 0; i < n; i++){
 		if (strcmp(quads[i].op, "=") == 0){
 			if (strcmp(quads[i].arg2, "nil") == 0){
@@ -79,11 +78,6 @@ int main(){
 			else if (strcmp(quads[i].result, "eax") == 0){
 				fprintf(fout, "\tmovl %s(%%rip), %%eax\n\n", quads[i].arg1);
 				}
-
-			else{
-				fprintf(fout, "\tmovl %s, %%eax\n", quads[i].result);
-				fprintf(fout, "\tmovl %s, %%eax\n", quads[i].result);
-			}
 		}
 
 		else if (strcmp(quads[i].op, "+") == 0)
@@ -98,7 +92,7 @@ int main(){
 	fclose(fout);
 	fclose(fin);
 
-	printf("\nAssembly code generated successfully\n");
+	printf("Assembly code generated successfully\n");
 
 	return 0;
 }
