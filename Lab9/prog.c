@@ -97,7 +97,7 @@ int main(){
 		
 		else if (strcmp(quads[i].op, "/") == 0)
 		{
-			fprintf(fout, "\tmovl $0, %%eax\n\tdivl %s(%%rip)\n", quads[i].arg1);
+			fprintf(fout, "\tmovl $0, %%edx\n\tdivl %s(%%rip)\n", quads[i].arg1);
 		}
 	}
 
