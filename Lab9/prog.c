@@ -84,6 +84,21 @@ int main(){
 		{
 			fprintf(fout, "\taddl %s(%%rip), %%eax\n", quads[i].arg1);
 		}
+		
+		else if (strcmp(quads[i].op, "-") == 0)
+		{
+			fprintf(fout, "\tsubl %s(%%rip), %%eax\n", quads[i].arg1);
+		}
+		
+		else if (strcmp(quads[i].op, "*") == 0)
+		{
+			fprintf(fout, "\timul %s(%%rip), %%eax\n", quads[i].arg1);
+		}
+		
+		else if (strcmp(quads[i].op, "/") == 0)
+		{
+			fprintf(fout, "\tmovl $0, %%eax\n\tdivl %s(%%rip)\n", quads[i].arg1);
+		}
 	}
 
 	fprintf(fout, "\n\tmovl z(%%rip), %%esi\n\tleaq msg(%%rip), %%rdi\n\tmovl $0, %%eax\n\tcall printf");
